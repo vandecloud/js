@@ -1,0 +1,73 @@
+Es un bloque de codigo autocontenido, que se va a definir una sola vez
+y se puede reutilizar mas de una vez. 
+Puede recibir parametro y puede devolver o no dependiendo del caso
+valores dependiendo del caso. 
+
+Las funciones son concideradas objetos. 
+Se puden pasar como argumentos 
+Se pueden devolver valores
+
+Funciones Flechas (mas adelante se vera)
+
+Dos manera de crear funciones DECLARADA 
+
+funcion(estoEsUnaFuncion){
+    console.log("Uno);
+    console.log("Dos);
+    console.log("Tres);
+}
+
+Ya estaria la funcion declarada y la funcion esta esperando se llamada
+
+Invocacion de funciones y se pude llamar multiples veces
+estoEsUnaFuncion()
+estoEsUnaFuncion()
+estoEsUnaFuncion()
+
+
+function unaFuncionQueDevuelveValor(){
+
+    console.log("Uno");
+    return 19; ###Si el compilador detectar la palabra reservada retur ingnora todas las lineas de codigo por debajo.
+    console.log("Dos");
+    console.log("Tres")
+    
+    return "La funcion ha retornado cadena de texto"
+
+}
+
+
+Una funcion puede aceptar parametros
+
+function saludar(nombre, edad){
+    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años` )
+}
+
+
+Fucion declarada vs funciones expresadas
+
+Funcion declarada: function funcionDeclarada(){
+
+}
+
+JS eleva las funciones declaradas haciendo posible involvarla en cualquier parte del codigo
+
+
+
+Funcion expresadas:
+
+Funcion anonima
+
+const funcionExpresada = function(){
+console.log("esto es una funcion expresada, es decir una funcion que se le ah
+asignado como valor una variable, si se invocamos esta funcion antes de su definicion
+JS nos dira...)
+}
+
+
+ORDEN DEL codigo
+
+1- IMPORTACION DE MODULOS
+2- DECLARACION DE VARIBLES
+3- DECLARACION DE Funciones
+4- EJECUCION DE CODIGO
