@@ -59,15 +59,45 @@ console.log (`8`===8);
 
 // Operadores de decremento e incremento 
 
-let i = 1;
-i = i + 2;
-i+=3
+console.log("****OPERADORES DE DECREMENTO E INCREMENTO****")
+let i = 1; // Declaracion de variable
+
+console.log("**** let i = 1 operamos i = i + 1 ")
+i = i + 1
 console.log(i)
+
+console.log ("*** es igual que escribir i+1 =2 *** ")
+let j = 1
+j += 1
+console.log(j)
 
 // Operador unario
 
-console.log (i)
+console.log ("**Operador unario h = 1 => h++ con el signo + incrementamo en uno y con el signo menos decrecemos en 1")
+h = 1
+h++;
+console.log("h = 1")
+console.log(" h++" + "="+ h)
 
+++h
+console.log("++h (suma 1 a la variable y luego lo muestra por pantalla )no es lo mismo h++ (imprime el valor por patalla y luego le suma + 1)")
+console.log(" ++h" + "=" + h )
+
+// Estructuras condicionales NOT(NO)(!) OR(O)(||) AND(I)(&&) 
+
+//NOT cambia la condicion del valor, lo que es verdadero lo trasforma en falso y lo falso en verdadero
+
+console.log(!true)
+console.log(!false)
+
+console.log("OR cuando una condicion se cumpla va a validar como true")
+
+console.log(9===9 || "9"===9)
+console.log("AND Cuando las 2 o mas condiciones todas deben ser verdaderas para que and devuelva TRUE")
+
+console.log(9===9 && "9"===9)
+
+console.log(9===9 && 9===9)
 
 
 
