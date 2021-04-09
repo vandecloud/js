@@ -68,9 +68,9 @@ jueves -4
 viernes -5 
 sabado -6 */
 
-let dia =6;
+let dia = 1;
 switch (dia) {
-    case 0:
+    case 1:
         console.log("Domingo")
         break;
     case 1:
