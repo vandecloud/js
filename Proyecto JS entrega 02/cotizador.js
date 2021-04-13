@@ -45,17 +45,21 @@ switch (monedaConvertir) {
         alert("No se puede realizar la conversion")
         break;
 }
+*/
+
+// Genera un carga de Cripo por Promt y luego hace una concatenacion agregando 2 elementos a la array.
+// Genera una lista usando el metodo forEach recorriendo la lista nueva lo imprime por consola 
 
 const listaCriptomonedas = [];
 let cantidad = 5;
 
 do{
-    let entrada = prompt("Ingresar la Cripto que quieres listar");
+    let entrada = prompt("Ingresar 5 Criptos que quieres listar");
     listaCriptomonedas.push(entrada.toUpperCase());
     console.log(listaCriptomonedas.length);
 }while(listaCriptomonedas.length != cantidad)
 
-const nuevaListaCripto = listaCriptomonedas.concat(["ORO", "PLATA"]);
+const nuevaListaCripto = listaCriptomonedas.concat(["FIL", "CAKE"]);
 
 alert(nuevaListaCripto.join("\n"));
 
@@ -64,7 +68,7 @@ alert(nuevaListaCripto.join("\n"));
 nuevaListaCripto.forEach(function(el,index){
 console.log(`<li id="${index}">${el}</li>`)
 })
-*/
+
 
 class Cripto {
     constructor(nombre, cotizacion){
@@ -90,25 +94,3 @@ for(const cripto of criptos)
 
 console.log(criptos)
 
-/*
-class Producto {
-    constructor(nombre, precio) {
-        this.nombre  = nombre.toUpperCase();
-        this.precio  = parseFloat(precio);
-        this.vendido = false;
-    }
-    sumaIva() {
-        this.precio = this.precio * 1.21;
-    }
-}
-//Declaramos un array de productos para almacenar objetos
-const productos = [];
-productos.push(new Producto("arroz", "125"));
-productos.push(new Producto("fideo", "70"));
-productos.push(new Producto("pan", "50"));
-//Iteramos el array con for...of para modificarlos a todos
-for (const producto of productos)
-    producto.sumaIva();
-
-console.log(productos)
-*/
