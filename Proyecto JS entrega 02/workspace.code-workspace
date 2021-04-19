@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../LambdaCI-CDDemo"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "js"
+	}
+}
