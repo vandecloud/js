@@ -1,0 +1,52 @@
+
+
+  
+ body {
+    content: "";
+    background-color: #333;
+    color:#fff;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+
+.container{
+  margin-top: 70px;
+}
+ul{
+    color:rgb(127, 34, 139)
+}
+
+
+td {
+    color:rgb(109, 47, 255);
+    
+}
+
+
+.stilo{
+  color:royalblue
+}
+
+.stilo2{
+  color: red;
+}
+
+
+.msgCriptoByDom , h2{
+  background-color: black;
+  color:greenyellow
+
+} 
+
+
+.otro{
+  color: blue;
+}
+
+
