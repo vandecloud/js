@@ -1,9 +1,6 @@
 
-
-  
  body {
     content: "";
-    
     background: radial-gradient(circle, black, white);
     opacity: 1;
     top: 0;
