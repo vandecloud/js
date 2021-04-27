@@ -22,30 +22,36 @@ document.querySelector('#msgCriptoByDom').appendChild(parrafo);
 //Crear e insertar elementos 
 
 const criptoMonedasArray = ['BNB', 'BTC', 'ETH',  'LTC',  'ANT',  'NEO','QTUM']
+const criptoBrokerArray = ['Coinlist', 'Binance', 'KuCoin',]
+const operacionArray = ['BE', 'ABIERTA', 'CERRADA',]
+const posicionArray = ['LONG', 'SHORT'] // A utilizar en el futuro
 
 const title = document.getElementById('title')
 const subTitle = document.getElementById('subTitle')
 const subTitle2 = document.getElementById('subTitle2')
 const criptoList = document.getElementById('criptoList')
 const selectCripto = document.getElementById('criptoSelect')
+const selectBroker = document.getElementById('brokerSelect')
+const selectoperacionSelect = document.getElementById('operacionSelect')
+
 
 
 
 // Colocamos el titulo de nuestro desafio
-title.innerHTML = "<span class='stilo'>Desafio Manipulando el DOM</span>"
+/* title.innerHTML = "<span class='stilo'>Desafio Manipulando el DOM</span>"
 
-subTitle.innerHTML = "<span class='stilo2'>Lista dinamica tomada de un array y insertada en el DOM</span>"
+subTitle.innerHTML = "<span class='stilo2'>Lista dinamica tomada de un array y insertada en el DOM</span>" */
 
 // Use Frament ya que permite ahorrar recursos de equipo ya que 
 const fragment = document.createDocumentFragment()
 
-for (const cripto of criptoMonedasArray){
+/* for (const cripto of criptoMonedasArray){
     const itemList = document.createElement('li')
     itemList.textContent = cripto
     fragment.appendChild(itemList)
 }
 
-criptoList.appendChild(fragment)
+criptoList.appendChild(fragment) */
 
 subTitle2.innerHTML = "<span class='stilo2'>Menu desplegable creado a partir de un array</span>"
 
@@ -60,10 +66,25 @@ selectCripto.appendChild(fragment)
 
 
 
+for (const broker of criptoBrokerArray){
+    const selectItem = document.createElement('OPTION')
+    selectItem.setAttribute('value', broker.toLowerCase() )
+    selectItem.textContent = broker
+    fragment.appendChild(selectItem)
+
+}
+selectBroker.appendChild(fragment)
 
 
+for (const operacion of operacionArray){
+    const selectItem = document.createElement('OPTION')
+    selectItem.setAttribute('value', operacion.toLowerCase() )
+    selectItem.textContent = operacion
+    fragment.appendChild(selectItem)
 
+}
 
+selectoperacionSelect.appendChild(fragment)
 
 
 

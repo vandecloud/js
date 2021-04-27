@@ -1,5 +1,18 @@
-  
+@charset "UTF-8";
+/*donde aparecerán los resets, las variables, los mixins*/
+/*Variables*/
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
+.no-gutters {
+  padding-left: 0 !important;
+  padding-right: 0!important; }
+
+a:link, a:visited, a:active {
+  text-decoration: none !important; }
+
  body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif !important; 
   content: "";
   background-color: #333;
   color:#fff;
@@ -22,8 +35,7 @@ ul{
 
 
 td {
-  color:rgb(109, 47, 255);
-  
+  color:#fff  
 }
 
 
@@ -47,3 +59,8 @@ color: blue;
 }
 
 
+.more-operation{
+  color: black;
+  background-color: yellow;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class ="row">
+    <div class="col-sm-12">
+      <h2>Tabla Dinaminca de inversiones</h2>
+      <caption>
+        <button class="btn bi-plus-square more-operation"> Nueva Operacion</button>
+      </caption>
+      <table class="table table-hover table-condensed table-borderred">
+        <thead class="table-dark">
+        </thead>
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID Operacion</th>
+            <th scope="col">BROKER</th>
+            <th scope="col">Activo</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Ingreso</th>
+            <th scope="col">Stop Loss</th>
+            <th scope="col">TP 1</th>
+            <th scope="col">TP 2</th>
+            <th scope="col">TP 3</th>
+            <th scope="col">TP 4</th>
+            <th scope="col">TP 5</th>
+            <th scope="col">POSICION</th>
+            <th scope="col">Estado Operacion</th>
+            <th scope="col">Precio de Compra</th>
+            <th scope="col">Inversion</th>
+            <th scope="col">BE</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td id="BROKER">Coinlist</td>
+            <td>
+              <div>
+                <select id="criptoSelect"></select>
+              </div>
+            </td>
+            <td>2020-01-20</td>
+            <td>$10.00</td>
+            <td>$8.00</td>
+            <td>$12.00</td>
+            <td>$15.00</td>
+            <td>$18.00</td>
+            <td>$20.00</td>
+            <td>$0.0</td>
+            <td>LONG</td>
+            <td>BE/ABIERTA/CERRADA</td>
+            <td>$49</td>
+            <td>$200</td>
+            <td>100%</td>
+            <td>
+              <button class="btn btn-warning bi bi-pencil"></button>
+            </td>
+            <td>
+              <button class="btn btn-danger bi bi-x-square"></button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>BINCE</td>
+            <td>ETH/USDT</td>
+            <td>2020-01-20</td>
+            <td>$10.00</td>
+            <td>$8.00</td>
+            <td>$12.00</td>
+            <td>$15.00</td>
+            <td>$18.00</td>
+            <td>$20.00</td>
+            <td>$0.0</td>
+            <td>LONG</td>
+            <td>BE/ABIERTA/CERRADA</td>
+            <td>$49</td>
+            <td>$200</td>
+            <td>100%</td>
+            <td>
+              <button class="btn btn-warning bi bi-pencil"></button>
+            </td>
+            <td>
+              <button class="btn btn-danger bi bi-x-square"></button>
+            </td>
+
+            
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>KuCoin</td>
+            <td>LTC/USDT</td>
+            <td>2020-01-20</td>
+            <td>$10.00</td>
+            <td>$8.00</td>
+            <td>$12.00</td>
+            <td>$15.00</td>
+            <td>$18.00</td>
+            <td>$20.00</td>
+            <td>$0.0</td>
+            <td>LONG</td>
+            <td>BE/ABIERTA/CERRADA</td>
+            <td>$49</td>
+            <td>$200</td>
+            <td>100%</td>
+            <td>
+              <button class="btn btn-warning bi bi-pencil"></button>
+            </td>
+            <td>
+              <button class="btn btn-danger bi bi-x-square"></button>
+            </td>
+
+            
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>BINCE</td>
+            <td>ANT/USDT</td>
+            <td>2020-01-20</td>
+            <td>$10.00</td>
+            <td>$8.00</td>
+            <td>$12.00</td>
+            <td>$15.00</td>
+            <td>$18.00</td>
+            <td>$20.00</td>
+            <td>$0.0</td>
+            <td>LONG</td>
+            <td>BE/ABIERTA/CERRADA</td>
+            <td>$49</td>
+            <td>$200</td>
+            <td>100%</td>
+            <td>
+              <button class="btn btn-warning bi bi-pencil"></button>
+            </td>
+            <td>
+              <button class="btn btn-danger bi bi-x-square"></button>
+            </td>
+
+            
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>BINCE</td>
+            <td>NEO/USDT</td>
+            <td>2020-01-20</td>
+            <td>$10.00</td>
+            <td>$8.00</td>
+            <td>$12.00</td>
+            <td>$15.00</td>
+            <td>$18.00</td>
+            <td>$20.00</td>
+            <td>$0.0</td>
+            <td>LONG</td>
+            <td>BE/ABIERTA/CERRADA</td>
+            <td>$49</td>
+            <td>$200</td>
+            <td>100%</td>
+            <td>
+              <button class="btn btn-warning bi bi-pencil"></button>
+            </td>
+            <td>
+              <button class="btn btn-danger bi bi-x-square"></button>
+            </td>
+
+            
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>BINCE</td>
+            <td>BAT/USDT</td>
+            <td>2020-01-20</td>
+            <td>$10.00</td>
+            <td>$8.00</td>
+            <td>$12.00</td>
+            <td>$15.00</td>
+            <td>$18.00</td>
+            <td>$20.00</td>
+            <td>$0.0</td>
+            <td>LONG</td>
+            <td>BE/ABIERTA/CERRADA</td>
+            <td>$49</td>
+            <td>$200</td>
+            <td>100%</td>
+            <td>
+              <button class="btn btn-warning bi bi-pencil"></button>
+            </td>
+            <td>
+              <button class="btn btn-danger bi bi-x-square"></button>
+            </td>
+
+            
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>BINCE</td>
+            <td>BTC/USDT</td>
+            <td>2020-01-20</td>
+            <td>$10.00</td>
+            <td>$8.00</td>
+            <td>$12.00</td>
+            <td>$15.00</td>
+            <td>$18.00</td>
+            <td>$20.00</td>
+            <td>$0.0</td>
+            <td>LONG</td>
+            <td>BE/ABIERTA/CERRADA</td>
+            <td>$49</td>
+            <td>$200</td>
+            <td>100%</td>
+            <td>
+              <button class="btn btn-warning bi bi-pencil"></button>
+            </td>
+            <td>
+              <button class="btn btn-danger bi bi-x-square"></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>        
+    </div>
+  </div>
+  <script src="../scripts/dom.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</body>
+</html>
