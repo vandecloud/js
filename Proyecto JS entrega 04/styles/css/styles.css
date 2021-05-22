@@ -76,3 +76,10 @@ color: blue;
   background-color: yellow;
   margin-bottom: 5px;
 }
+
+.containerFormulario img {
+  margin-top: 150px;
+}
+img {
+  max-width: 100%;
+}
