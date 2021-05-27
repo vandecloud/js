@@ -30,10 +30,9 @@ const title = document.getElementById('title')
 const subTitle = document.getElementById('subTitle')
 const subTitle2 = document.getElementById('subTitle2')
 const criptoList = document.getElementById('criptoList')
-const selectCripto = document.getElementById('criptoSelect')
-const selectBroker = document.getElementById('brokerSelect')
-const selectoperacionSelect = document.getElementById('operacionSelect')
-
+const selectCripto = document.querySelectorAll('.criptoSelect')
+const selectBroker = document.querySelectorAll('.brokerSelect')
+const selectoperacionSelect = document.querySelectorAll('.operacionSelect')
 
 
 
@@ -43,7 +42,7 @@ const selectoperacionSelect = document.getElementById('operacionSelect')
 subTitle.innerHTML = "<span class='stilo2'>Lista dinamica tomada de un array y insertada en el DOM</span>" */
 
 // Use Frament ya que permite ahorrar recursos de equipo ya que 
-const fragment = document.createDocumentFragment()
+/* const fragment = document.createDocumentFragment() */
 
 /* for (const cripto of criptoMonedasArray){
     const itemList = document.createElement('li')
@@ -56,36 +55,29 @@ criptoList.appendChild(fragment) */
 //subTitle2.innerHTML = "<span class='stilo2'>Menu desplegable creado a partir de un array</span>"
 
 for (const cripto of criptoMonedasArray){
-    const selectItem = document.createElement('OPTION')
+    const selectItem = document.createElement('option')
     selectItem.setAttribute('value', cripto.toLowerCase() )
     selectItem.textContent = cripto
-    fragment.appendChild(selectItem)
+    $(selectCripto).append(selectItem);
 
 }
-selectCripto.appendChild(fragment)
-
-
 
 for (const broker of criptoBrokerArray){
-    const selectItem = document.createElement('OPTION')
+    const selectItem = document.createElement('option')
     selectItem.setAttribute('value', broker.toLowerCase() )
     selectItem.textContent = broker
-    fragment.appendChild(selectItem)
+    $(selectBroker).append(selectItem);
 
 }
-selectBroker.appendChild(fragment)
 
 
 for (const operacion of operacionArray){
-    const selectItem = document.createElement('OPTION')
+    const selectItem = document.createElement('option')
     selectItem.setAttribute('value', operacion.toLowerCase() )
     selectItem.textContent = operacion
-    fragment.appendChild(selectItem)
+   $(selectoperacionSelect).append(selectItem);
 
 }
-
-selectoperacionSelect.appendChild(fragment)
-
 
 
 //Efectos Fade In Fade Out Fade Toggle.
@@ -117,7 +109,22 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+    $('.more-operation').click(function(){
+        $("#formulario").toggle(800);
+    })
 
+});
+
+
+/* $(document).ready(function () {
+    $('.more-operation').click(function(){
+        $(".more-operation").fadeIn(3000, function(){
+            $("#formulario").text ("Fin del efecto 👌")
+        });
+    })
+
+}); */
 
 
 

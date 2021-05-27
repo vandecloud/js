@@ -19,3 +19,7 @@ if(boolean1 === true) {
 // Pero este código se puede simplificar quitando el === true porque ya sabemos que la variable es true
 
 // Este mismo ejemplo aplica si un usuario esta autenticado puede darle me gusta a una foto o ver una página, así como si ya tienes una cuenta en netflix y has pagado 
+
+if (boolean1){
+    console.log('El True esta implicio')
+}
