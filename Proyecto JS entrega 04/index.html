@@ -11,29 +11,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Contizador Cripto Modena</title>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">User Login</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Balances</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./views/cotizacion.html">Cotizacion</a>
-          </li>
-        </ul>
+<body class="container-fluid no-gutters">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">User Login</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Balances</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./views/cotizacion.html">Cotizacion</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!--formulario de login-->
+    </nav>
+    <!--formulario de login-->
     <div>
         <form class="form-inline" action="/action_page.php">
             <label for="email" class="mr-sm-2">Email address:</label>
@@ -48,142 +49,94 @@
             <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </form>
     </div>
-<!--Mesanje del dia, a futuro tengo pensado cambiarlo por algo dinamico-->
-    <div>
-      <button class="btn btn-primary fadeOut">Efecto Fade Out</button>
-      <button class="btn btn-danger fadeIn">Efecto Fade In</button>
-      <button class="btn btn-warning fadeTog">Efecto Toggle</button>
+    <div id=msgCriptoByDom ></div>
+    <div id="inversiones">
+      <table id="listaInversiones"class="table table-hover table-condensed table-borderred">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID Operacion</th> 
+            <th scope="col">Exchange</th>
+            <th scope="col">Activo</th>
+            <th scope="col">Par</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Stop Loss</th>
+            <th scope="col">Toma de Ganancias</th>
+            <th scope="col">Posicion</th>
+            <th scope="col">Estado Operacion</th>
+            <th scope="col">Precio de Compra</th>
+            <th scope="col">Inversion</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="limpiarAllInversiones"type="submit" class="btn more-operation mb-2"> Limpiar All</button>
     </div>
-    <hr>
-    <div id=msgCriptoByDom >
-    </div>
-    <!--Generar una lista dinamica-->
-    <div>
-      <h3 id="title"></h3>
-      <h4 id="subTitle"></h4>
-      <ul id="criptoList"></ul>
-      <h4 id="subTitle2"></h4>
-     <!--  <select id="criptoSelect"></select> -->
-    </div>
-<!--Insertamos la tabla dinamica-->
- <!--    <div class="grid-container no-gutters">
-      <div id="tabla"></div>
-    </div> -->
-
     <div class ="row">
       <div class="col-sm-12">
         <h2>Tabla Dinaminca de inversiones</h2>
         <div id="formulario" class="col-md-3">
           <form> 
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Seleccionar Broker</label>
-              <select class="form-control brokerSelect" id="exampleFormControlSelect1">
+              <label for="exampleFormControlSelect1">Seleccionar Exchange</label>
+              <select class="form-control " id="exchangeSelect">
               </select>
             </div>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Que cripto a operar</label>
-              <select class="form-control criptoSelect" id="exampleFormControlSelect1">
+              <label for="exampleFormControlSelect1">Seleccionar Activo</label>
+              <select class="form-control" id="coinSelect">
               </select>
             </div>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control brokerSelect" id="exampleFormControlSelect1">
+              <label for="exampleFormControlSelect1">Elige tu Moneda</label>
+              <select class="form-control" 
+                      id="moneda"
+                      name= "moneda">
+                      <option value="">Elige tu moneda</option>
+                      <option value="USD">Dolar Estadounidense</option>
+                      <option value="MXN">Peso Mexicano</option>
+                      <option value="GBP">Libras</option>
+                    <!-- <option value="EUR">Euros</option>-->
+                      <option value="ARG">Peso Argentino</option>
               </select>
             </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Stop Loss</label>
+              <input type="number" class="form-control mb-2 mr-sm-2" id="stopLoss" placeholder="0.00">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Toma de Ganancias</label>
+              <input type="number" class="form-control mb-2 mr-sm-2" id="takeProfit" placeholder="0.00">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Posicion</label>
+              <select class="form-control" id="posicionSelect">
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Precio de Compra Dolares</label>
+              <input type="number" class="form-control mb-2 mr-sm-2" id="precioCompra"placeholder="0.00">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Inversion</label>
+              <input type="number" class="form-control mb-2 mr-sm-2" id="inversion" placeholder="0.00">
+            </div>
+              <button id="nuevaOperacion" type="submit" class="btn more-operation newOperation mb-2"> Nueva Operacion</button>
           </form>
         </div>
-          <caption>
-            <button class="btn bi-plus-square more-operation"> Nueva Operacion</button>
-          </caption>
-        <table class="table table-hover table-condensed table-borderred">
-          <thead class="table-dark">
-          </thead>
-          <thead class="table-dark">
-            <tr>
-              <th scope="col">ID Operacion</th>
-              <th scope="col">BROKER</th>
-              <th scope="col">Activo</th>
-              <th scope="col">Fecha</th>
-              <th scope="col">Ingreso</th>
-              <th scope="col">Stop Loss</th>
-              <th scope="col">TP 1</th>
-              <th scope="col">POSICION</th>
-              <th scope="col">Estado Operacion</th>
-              <th scope="col">Precio de Compra</th>
-              <th scope="col">Inversion</th>
-              <th scope="col">BE</th>
-              <th scope="col">Editar</th>
-              <th scope="col">Borrar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>
-                <select class="brokerSelect"></select>
-              </td>
-              <td>
-                <select class="criptoSelect"></select>
-              </td>
-              <td>2020-01-20</td>
-              <td>$10.00</td>
-              <td>$8.00</td>
-              <td>$12.00</td>
-              <td>LONG</td>
-              <td>
-                <select class="operacionSelect"></select>
-              </td>
-              <td>$49</td>
-              <td>$200</td>
-              <td>100%</td>
-              <td>
-                <button class="btn btn-warning bi bi-pencil"></button>
-              </td>
-              <td>
-                <button class="btn btn-danger bi bi-x-square"></button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <th>
-                <select class="brokerSelect"></select>
-              </th>
-             
-            </td>
-            <td>
-              <select class="criptoSelect"></select>
-            </td>
-              <td>2020-01-20</td>
-              <td>$10.00</td>
-              <td>$8.00</td>
-              <td>$12.00</td>
-              <td>LONG</td>
-              <td>
-                <select class="operacionSelect"></select>
-              </td>
-              <td>$49</td>
-              <td>$200</td>
-              <td>100%</td>
-              <td>
-                <button class="btn btn-warning bi bi-pencil"></button>
-              </td>
-              <td>
-                <button class="btn btn-danger bi bi-x-square"></button>
-              </td>
-            </tr>
-          </tbody>
-        </table>        
-      </div>
     </div>
-    
-  <!--Separete Bootstrap-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-  <!--Separete Scrip JS-->
-  <script src="./scripts/main.js"></script>
-  <script src="./scripts/dom.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--Separete Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <!--Separete Scrip JS-->
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/dom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+  </div>
 </body>
 </html>
 
