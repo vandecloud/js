@@ -75,6 +75,7 @@ color: blue;
   color: black;
   background-color: yellow;
   margin-bottom: 5px;
+  margin-left: 20px;
 }
 
 .containerFormulario img {
@@ -82,4 +83,17 @@ color: blue;
 }
 img {
   max-width: 100%;
+}
+
+#spinner {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.limpiar{
+  color: black;
+  background-color: rgb(60, 255, 0);
+  margin-bottom: 5px;
+  margin-left: 80px;
 }

@@ -6,7 +6,6 @@ const posicionArray = ['LONG', 'SHORT']
 let seguimientoInversiones = [];
 
 
-
 const inversiones = document.querySelector('#inversiones');
 const listaInversiones = document.querySelector('#listaInversiones tbody');
 const limpiarAllInversiones = document.querySelector('#limpiarAllInversiones');
@@ -33,6 +32,9 @@ function cargarEventListeners(){
     nuevaOperacion.addEventListener('click', agregarOperacion);
 
     // Muestra las operaciones de Local Storage
+
+    // Crear nueva operacion 
+
 
 
     limpiarAllInversiones.addEventListener('click', () => {
@@ -65,7 +67,6 @@ function agregarOperacion(e){
     
 
 }
-
 
 // Lee contenido Formulario
 function leerDatosFormulario(operacion){
@@ -194,6 +195,10 @@ function selectCriptomonedas(criptomonedas) {
     });
 }
 
+
+
+
+/* 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧  */
 function leerValor(e)  {
     objBusqueda[e.target.name] = e.target.value;
 }
@@ -212,10 +217,7 @@ function submitFormulario(e) {
     consultarAPI();
 }
 
-
-
-
-
+/* 🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧🚧  */
 
 
 for (const exchange of criptoExchangeArray){
@@ -254,3 +256,21 @@ parrafo.textContent = msgConcatenado;
 
 document.querySelector('#msgCriptoByDom').appendChild(parrafo);
 
+/* 
+$(document).ready(function () {
+    $('#nuevaOperacion').click(function(){
+        $("#formulario").fadeIn(3000, function(){
+        });
+    })
+
+});
+
+$(document).ready(function () {
+    $('.fadeIn').click(function(){
+        $("#msgCriptoByDom").fadeIn(3000, function(){
+            $(".fadeIn").text ("Fin del efecto 👌")
+        });
+    })
+
+});
+ */
